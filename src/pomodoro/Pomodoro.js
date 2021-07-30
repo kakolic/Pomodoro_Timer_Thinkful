@@ -58,7 +58,7 @@ function Pomodoro() {
   // ToDo: Allow the user to adjust the focus and break duration.
   const [focusDuration, setFocusDuration] = useState(25);
   const [breakDuration, setBreakDuration] = useState(5);
-  const [toLeft, setToLeft]= useState(0)
+  
   const [aria, setAria] = useState(0);
 
   
@@ -73,7 +73,7 @@ function Pomodoro() {
    * NOTE: You will not need to make changes to the callback function
    */
    useInterval(() => {
-    setToLeft(toLeft + 1);
+  
       if (session.timeRemaining === 0) {
         new Audio("https://bigsoundbank.com/UPLOAD/mp3/1482.mp3").play();
         setSession(nextSession(focusDuration, breakDuration));
